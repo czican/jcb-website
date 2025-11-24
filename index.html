@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JCB</title>
   <meta name="description" content="JCB – a simple starting point for a consulting and products studio." />
+body {
+  background: url('zoro-bg.jpg') center center / cover fixed no-repeat;
+  position: relative;
+}
+
+/* Light overlay so the text stays readable */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 245, 245, 0.85); 
+  pointer-events: none;
+  z-index: -1;
+}
 
   <style>
     :root {
