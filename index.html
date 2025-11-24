@@ -1,129 +1,1368 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JCB — Data, Automation, and Cloud Consulting</title>
-    <meta name="description" content="Jnyan Cit Bajrang LLC (JCB): data engineering, automation, analytics, and cloud consulting." />
-    <meta property="og:title" content="JCB — Data, Automation, and Cloud Consulting" />
-    <meta property="og:description" content="We build reliable data & automation systems for growing teams." />
-    <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; }
-    </style>
-  </head>
-  <body class="bg-white text-slate-900">
-    <!-- Header -->
-    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
-      <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-        <a href="#" class="font-bold text-xl">JCB</a>
-        <nav class="hidden md:flex gap-6 text-sm">
-          <a href="#services" class="hover:text-slate-700">Services</a>
-          <a href="#work" class="hover:text-slate-700">Work</a>
-          <a href="#about" class="hover:text-slate-700">About</a>
-          <a href="#contact" class="hover:text-slate-700">Contact</a>
-        </nav>
-        <a href="#contact" class="inline-flex items-center rounded-xl bg-sky-500 px-4 py-2 text-white font-semibold hover:bg-sky-600">Talk to us</a>
-      </div>
-    </header>
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JCB TechHub – Knowledge. Consciousness. Strength.</title>
+  <meta name="description" content="JCB TechHub (Jnyan Cit Bajrang LLC) is a modern consulting studio for data, automation, analytics, and software — built on knowledge, consciousness, and strength." />
 
-    <main>
-      <!-- Hero -->
-      <section class="mx-auto max-w-6xl px-4 pt-16 pb-14">
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">We build reliable data & automation systems for growing teams.</h1>
-            <p class="mt-4 text-lg text-slate-700">From pipelines to dashboards to bots, JCB designs, builds, and maintains it—fast.</p>
-            <div class="mt-6 flex gap-3">
-              <a href="#contact" class="rounded-xl bg-sky-500 px-5 py-3 text-white font-semibold hover:bg-sky-600">Start a project</a>
-              <a href="#work" class="rounded-xl border px-5 py-3 font-semibold hover:bg-slate-50">See our work</a>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-alt: #050816;
+      --bg-card: #0b1020;
+      --accent-start: #6366f1;
+      --accent-mid:   #a855f7;
+      --accent-end:   #ec4899;
+      --accent-soft: rgba(99, 102, 241, 0.25);
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.25);
+      --radius-xl: 1.2rem;
+      --radius-lg: 0.9rem;
+      --radius-pill: 999px;
+      --shadow-soft: 0 22px 55px rgba(15, 23, 42, 0.9);
+      --shadow-card: 0 18px 40px rgba(15, 23, 42, 0.75);
+      --container-width: 1120px;
+      --blur-nav: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at top left, #111827 0, #020617 58%),
+        radial-gradient(circle at bottom right, #020617 0, #000 60%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* NAVBAR */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(var(--blur-nav));
+      background: linear-gradient(to bottom,
+        rgba(15,23,42,0.96),
+        rgba(15,23,42,0.85),
+        rgba(15,23,42,0.65),
+        transparent
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .logo-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 13px;
+      background: conic-gradient(from 165deg,
+        var(--accent-start),
+        var(--accent-mid),
+        var(--accent-end),
+        var(--accent-start)
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #020617;
+      box-shadow: 0 12px 32px rgba(59,130,246,0.55);
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      font-size: 0.96rem;
+      text-transform: uppercase;
+    }
+
+    .logo-text-sub {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.3rem;
+      align-items: center;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.08rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0;
+      height: 2px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(to right, var(--accent-start), var(--accent-end));
+      transition: width 0.18s ease-out;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 0.45rem 0.95rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: radial-gradient(circle at top left,
+        rgba(99,102,241,0.25),
+        transparent 60%
+      );
+      box-shadow: 0 0 0 1px rgba(15,23,42,0.9);
+    }
+
+    .nav-cta span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: var(--radius-pill);
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34,197,94,0.7);
+    }
+
+    .nav-menu-toggle {
+      display: none;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.9);
+      border-radius: 0.8rem;
+      padding: 0.32rem 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 3.2rem 0 3.8rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.6rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.23rem 0.7rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background:
+        radial-gradient(circle at left, rgba(168,85,247,0.25), transparent 58%),
+        rgba(15,23,42,0.95);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-tag-pill {
+      padding: 0.1rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.92);
+      font-weight: 500;
+      color: var(--text-main);
+      border: 1px solid rgba(148,163,184,0.5);
+    }
+
+    .hero-title {
+      font-size: clamp(2.25rem, 4vw, 3.05rem);
+      line-height: 1.12;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-title span.gradient {
+      background: linear-gradient(120deg,
+        var(--accent-start),
+        var(--accent-mid),
+        var(--accent-end)
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+      line-height: 1.6;
+      margin-bottom: 1.7rem;
+    }
+
+    .hero-bullets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-chip {
+      font-size: 0.76rem;
+      padding: 0.28rem 0.75rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.45);
+      background: radial-gradient(circle at top left,
+        rgba(99,102,241,0.18),
+        rgba(15,23,42,0.92)
+      );
+      color: var(--text-muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: var(--radius-pill);
+      border: none;
+      font-size: 0.86rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: linear-gradient(135deg,
+        var(--accent-start),
+        var(--accent-mid),
+        var(--accent-end)
+      );
+      color: #020617;
+      box-shadow: 0 18px 45px rgba(129,140,248,0.7);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.84rem;
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top left,
+        rgba(148,163,184,0.16),
+        rgba(15,23,42,0.96)
+      );
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .btn-secondary span.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent-mid);
+      box-shadow: 0 0 12px rgba(168,85,247,0.9);
+    }
+
+    .hero-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.6rem;
+    }
+
+    /* HERO RIGHT – ORBIT CARD */
+
+    .hero-right {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-orbit {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 4 / 5;
+      border-radius: 1.7rem;
+      background:
+        radial-gradient(circle at top, rgba(129,140,248,0.16), transparent 62%),
+        radial-gradient(circle at bottom right, rgba(236,72,153,0.22), transparent 60%),
+        #020617;
+      border: 1px solid rgba(148,163,184,0.45);
+      box-shadow: var(--shadow-soft);
+      padding: 1.4rem 1.3rem;
+      overflow: hidden;
+    }
+
+    .orbit-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 999px;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid rgba(148,163,184,0.55);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      background: rgba(15,23,42,0.9);
+      margin-bottom: 1rem;
+    }
+
+    .orbit-pill span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34,197,94,0.75);
+    }
+
+    .orbit-heading {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    .orbit-sub {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .orbit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .orbit-chip {
+      border-radius: 1rem;
+      padding: 0.55rem 0.7rem;
+      font-size: 0.72rem;
+      border: 1px solid rgba(148,163,184,0.55);
+      background: rgba(15,23,42,0.92);
+      color: var(--text-muted);
+    }
+
+    .orbit-highlight {
+      border-radius: 1rem;
+      padding: 0.6rem 0.7rem;
+      border: 1px solid rgba(239,68,68,0.7);
+      font-size: 0.72rem;
+      background:
+        radial-gradient(circle at top left, rgba(248,113,113,0.2), transparent 60%),
+        rgba(15,23,42,0.92);
+      color: #fecaca;
+      margin-bottom: 1.1rem;
+    }
+
+    .orbit-footer {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      border-top: 1px dashed rgba(148,163,184,0.4);
+      padding-top: 0.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .orbit-mini-tag {
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      font-size: 0.65rem;
+      background: rgba(15,23,42,0.9);
+    }
+
+    /* SECTION WRAPPER */
+
+    section {
+      padding: 2.8rem 0 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .section-kicker {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .section-sub {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      max-width: 26rem;
+    }
+
+    /* SERVICES */
+
+    #services {
+      padding-top: 2.6rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .service-card {
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at top left,
+        rgba(99,102,241,0.18),
+        rgba(15,23,42,0.96)
+      );
+      border: 1px solid rgba(148,163,184,0.5);
+      padding: 1rem 1rem 1.1rem;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.65);
+      padding: 0.15rem 0.55rem;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.65rem;
+    }
+
+    .service-title {
+      font-size: 0.94rem;
+      font-weight: 500;
+      margin-bottom: 0.45rem;
+    }
+
+    .service-body {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+      line-height: 1.5;
+    }
+
+    .service-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .pill {
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.5);
+      background: rgba(15,23,42,0.95);
+    }
+
+    /* PHILOSOPHY */
+
+    #philosophy {
+      padding-top: 3rem;
+    }
+
+    .philo-wrapper {
+      border-radius: 1.6rem;
+      border: 1px solid rgba(148,163,184,0.6);
+      background:
+        radial-gradient(circle at top left, rgba(129,140,248,0.25), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(236,72,153,0.25), transparent 58%),
+        #020617;
+      padding: 1.5rem 1.4rem 1.6rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .philo-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .philo-main-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .philo-main-body {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .philo-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      opacity: 0.9;
+    }
+
+    .philo-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .philo-pill {
+      font-size: 0.74rem;
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.96);
+      color: var(--text-muted);
+    }
+
+    .philo-trio {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .philo-card {
+      border-radius: 1.1rem;
+      padding: 0.75rem 0.75rem 0.8rem;
+      background: rgba(15,23,42,0.96);
+      border: 1px solid rgba(148,163,184,0.65);
+      box-shadow: 0 14px 30px rgba(15,23,42,0.85);
+      font-size: 0.78rem;
+    }
+
+    .philo-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(148,163,184,0.9);
+      margin-bottom: 0.35rem;
+    }
+
+    .philo-heading {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .philo-text {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* PROCESS */
+
+    #process {
+      padding-top: 3rem;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .process-card {
+      border-radius: 1.1rem;
+      border: 1px dashed rgba(148,163,184,0.7);
+      padding: 0.8rem 0.8rem 0.9rem;
+      background: rgba(15,23,42,0.96);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-step {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: rgba(148,163,184,0.9);
+      margin-bottom: 0.3rem;
+    }
+
+    .process-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+      color: var(--text-main);
+    }
+
+    /* PROJECTS */
+
+    #projects {
+      padding-top: 3rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      border-radius: 1.2rem;
+      background: radial-gradient(circle at top left,
+        rgba(129,140,248,0.22),
+        rgba(15,23,42,0.96)
+      );
+      border: 1px solid rgba(148,163,184,0.6);
+      box-shadow: var(--shadow-card);
+      padding: 0.95rem 0.95rem 1rem;
+      font-size: 0.8rem;
+    }
+
+    .project-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .project-title {
+      font-size: 0.92rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-body {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+      line-height: 1.5;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* ABOUT */
+
+    #about {
+      padding-top: 3rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+      gap: 1.7rem;
+    }
+
+    .about-main {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .about-highlight {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-card {
+      border-radius: 1.1rem;
+      border: 1px solid rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.98);
+      padding: 0.95rem 0.95rem 1rem;
+      font-size: 0.8rem;
+      box-shadow: 0 16px 40px rgba(15,23,42,0.9);
+    }
+
+    .about-lines {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* CONTACT */
+
+    #contact {
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem;
+    }
+
+    .contact-card {
+      border-radius: 1.5rem;
+      border: 1px solid rgba(148,163,184,0.7);
+      background:
+        radial-gradient(circle at top left, rgba(129,140,248,0.3), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(236,72,153,0.28), transparent 60%),
+        #020617;
+      padding: 1.7rem 1.6rem 1.8rem;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.8rem;
+    }
+
+    .contact-meta span {
+      color: var(--text-main);
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid rgba(148,163,184,0.35);
+      padding: 0.9rem 0 1.2rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: radial-gradient(circle at top, rgba(15,23,42,0.95), #020617 55%);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--text-main);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .philo-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .philo-trio {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-menu-toggle {
+        display: inline-flex;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid,
+      .process-grid,
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 2.4rem;
+      }
+
+      section {
+        padding-top: 2.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <div class="logo-badge">JCB</div>
+        <div>
+          <div class="logo-text-main">JNYAN CIT BAJRANG</div>
+          <div class="logo-text-sub">Knowledge · Consciousness · Strength</div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#process">How we work</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="nav-cta">
+          <span class="dot"></span>
+          Let’s build together
+        </a>
+        <button class="nav-menu-toggle" aria-label="Menu (mobile only)">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <div class="hero-tag">
+            <span class="hero-tag-pill">JCB TechHub</span>
+            Modern consulting built on values not just billable hours
+          </div>
+
+          <h1 class="hero-title">
+            <span class="gradient">Knowledge. Consciousness. Strength.</span><br/>
+            Systems and teams that grow with you.
+          </h1>
+
+          <p class="hero-subtitle">
+            JCB is a small, sharp consulting studio that builds data, automation, and
+            software systems for teams who want reliability, clarity, and a little bit of fun
+            along the way.
+          </p>
+
+          <div class="hero-bullets">
+            <div class="hero-chip">Data & analytics platforms</div>
+            <div class="hero-chip">Automation & AI assistants</div>
+            <div class="hero-chip">Web & backend delivery</div>
+            <div class="hero-chip">Project-based & talent support</div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">
+              Start a project
+              <span>↗</span>
+            </a>
+            <a href="#services" class="btn-secondary">
+              <span class="dot"></span>
+              Explore what we do
+            </a>
+          </div>
+
+          <div class="hero-note">
+            Built from Houston, Texas — for teams that care about trust, craft, and long-term impact.
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-orbit">
+            <div class="orbit-pill">
+              <span class="dot"></span>
+              Tiny team, serious delivery
+            </div>
+            <div class="orbit-heading">What JCB looks like in practice</div>
+            <div class="orbit-sub">
+              Not a faceless consultancy. A small, thinking partner you can message directly and build with.
+            </div>
+
+            <div class="orbit-grid">
+              <div class="orbit-chip">
+                ◦ Data engineering<br/>
+                ◦ Warehouses & lakes<br/>
+                ◦ Analytics models
+              </div>
+              <div class="orbit-chip">
+                ◦ Dashboards & BI<br/>
+                ◦ Health & ops metrics<br/>
+                ◦ Decision support
+              </div>
+              <div class="orbit-chip">
+                ◦ Workflow automation<br/>
+                ◦ Glue between tools<br/>
+                ◦ Bots & triggers
+              </div>
+              <div class="orbit-chip">
+                ◦ Web frontends<br/>
+                ◦ APIs & services<br/>
+                ◦ Integrations
+              </div>
+            </div>
+
+            <div class="orbit-highlight">
+              “People first. We hire for skill and conscience, not just a CV.
+              Money is fuel for life, not the purpose of it.”
+            </div>
+
+            <div class="orbit-footer">
+              <div>
+                <div class="orbit-mini-tag">Project & retainer friendly</div>
+              </div>
+              <div>
+                Houston · Remote-friendly · Built to stay small and sharp.
+              </div>
             </div>
           </div>
-          <div class="rounded-2xl border p-6">
-            <ul class="grid grid-cols-2 gap-4 text-sm">
-              <li class="p-4 rounded-xl bg-slate-50"><strong>50%+</strong><br/>ETL cost reduction</li>
-              <li class="p-4 rounded-xl bg-slate-50"><strong>99.9%</strong><br/>Pipeline uptime</li>
-              <li class="p-4 rounded-xl bg-slate-50"><strong>2–6 wks</strong><br/>Typical delivery</li>
-              <li class="p-4 rounded-xl bg-slate-50"><strong>Cloud</strong><br/>AWS · Azure · GCP</li>
-            </ul>
-          </div>
         </div>
-      </section>
-
-      <!-- Services -->
-      <section id="services" class="bg-slate-50 border-y">
-        <div class="mx-auto max-w-6xl px-4 py-14">
-          <h2 class="text-2xl font-bold">Services</h2>
-          <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <article class="p-6 rounded-2xl bg-white border">
-              <h3 class="font-semibold">Data Engineering & Cloud</h3>
-              <p class="mt-2 text-sm text-slate-700">Modern pipelines, lakehouse architecture, Snowflake/Databricks, Terraform, cost control.</p>
-            </article>
-            <article class="p-6 rounded-2xl bg-white border">
-              <h3 class="font-semibold">Automation & Ops Bots</h3>
-              <p class="mt-2 text-sm text-slate-700">n8n workflows, HR/ops compliance, monitoring, alerting, API integrations.</p>
-            </article>
-            <article class="p-6 rounded-2xl bg-white border">
-              <h3 class="font-semibold">Analytics & BI</h3>
-              <p class="mt-2 text-sm text-slate-700">Power BI/Tableau dashboards, KPI design, forecasting, experimentation.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Work -->
-      <section id="work" class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-2xl font-bold">Selected Work</h2>
-        <div class="mt-6 grid md:grid-cols-2 gap-6">
-          <article class="p-6 rounded-2xl border">
-            <h3 class="font-semibold">Healthcare data platform</h3>
-            <p class="mt-2 text-sm text-slate-700">Consolidated claims & pharmacy data into a secure lakehouse; automated quality checks; saved 40% on ETL.</p>
-          </article>
-          <article class="p-6 rounded-2xl border">
-            <h3 class="font-semibold">HR compliance bot</h3>
-            <p class="mt-2 text-sm text-slate-700">Built n8n workflows for onboarding, document checks, and reminders; reduced manual effort by 70%.</p>
-          </article>
-        </div>
-      </section>
-
-      <!-- About -->
-      <section id="about" class="bg-slate-50 border-y">
-        <div class="mx-auto max-w-6xl px-4 py-14">
-          <h2 class="text-2xl font-bold">About JCB</h2>
-          <p class="mt-3 text-slate-700 max-w-3xl">Jnyan Cit Bajrang LLC is a Houston-based studio focused on dependable data systems, clear analytics, and pragmatic automation. We value reliability, clarity, and speed.</p>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="mx-auto max-w-6xl px-4 py-14">
-        <h2 class="text-2xl font-bold">Contact</h2>
-        <!-- We'll add a company email later. Form works now. -->
-        <form name="contact" method="POST" data-netlify="true" class="mt-6 grid gap-4 max-w-xl">
-          <input type="hidden" name="form-name" value="contact" />
-          <input class="border rounded-xl px-4 py-3" type="text" name="name" placeholder="Your name" required>
-          <input class="border rounded-xl px-4 py-3" type="email" name="email" placeholder="Email" required>
-          <textarea class="border rounded-xl px-4 py-3" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
-          <button class="rounded-xl bg-sky-500 px-5 py-3 text-white font-semibold hover:bg-sky-600 w-fit">Send</button>
-        </form>
-      </section>
-    </main>
-
-    <footer class="border-t">
-      <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600 flex flex-col md:flex-row gap-2 md:items-center md:justify-between">
-        <p>© <span id="year"></span> Jnyan Cit Bajrang LLC · Houston, Texas</p>
-        <nav class="flex gap-4">
-          <a href="#" class="hover:text-slate-800">Privacy</a>
-          <a href="#" class="hover:text-slate-800">Terms</a>
-        </nav>
       </div>
-    </footer>
+    </section>
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">What JCB does</div>
+            <div class="section-title">Practical systems, not just slide decks.</div>
+          </div>
+          <div class="section-sub">
+            JCB can step in as your project partner or as an external tech team —
+            from architecture to dashboards to small tools that save hours every week.
+          </div>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-tag">Data & Analytics</div>
+            <h3 class="service-title">Data engineering & analytics foundations</h3>
+            <p class="service-body">
+              Help you collect, clean, and structure data so decisions are based on something more solid than guesses or
+              scattered spreadsheets.
+            </p>
+            <div class="service-meta">
+              <span class="pill">Pipelines & ETL</span>
+              <span class="pill">Warehouses & lakes</span>
+              <span class="pill">Reporting & KPIs</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Software</div>
+            <h3 class="service-title">Websites, frontends, and small backends</h3>
+            <p class="service-body">
+              Simple, focused sites and internal tools that feel fast, clean, and easy
+              for non-technical teammates to live with.
+            </p>
+            <div class="service-meta">
+              <span class="pill">Company sites</span>
+              <span class="pill">Internal tools</span>
+              <span class="pill">APIs & integrations</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Automation & AI</div>
+            <h3 class="service-title">Workflows, bots & assistants</h3>
+            <p class="service-body">
+              Stitch together your apps so boring, repetitive work quietly disappears
+              into background automations and simple chat-based tools.
+            </p>
+            <div class="service-meta">
+              <span class="pill">Automation flows</span>
+              <span class="pill">AI helpers</span>
+              <span class="pill">Notifications & alerts</span>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-tag">Consulting & Talent</div>
+            <h3 class="service-title">Project bids & trusted people</h3>
+            <p class="service-body">
+              Bid on focused projects, or bring in JCB-aligned people with both skill
+              and conscience for time-bound work.
+            </p>
+            <div class="service-meta">
+              <span class="pill">Project-based</span>
+              <span class="pill">Staff augmentation</span>
+              <span class="pill">Advisory</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section id="philosophy">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Why JCB exists</div>
+            <div class="section-title">Jnyan. Cit. Bajrang.</div>
+          </div>
+          <div class="section-sub">
+            The name is not decoration. It’s the operating system underneath how we work,
+            who we hire, and the projects we say “yes” or “no” to.
+          </div>
+        </div>
+
+        <div class="philo-wrapper">
+          <div class="philo-grid">
+            <div>
+              <div class="philo-main-title">A company you raise, not just register.</div>
+              <p class="philo-main-body">
+                JCB was imagined as more than a legal entity. It’s the “first puppy”
+                that never existed — something to care for, train, and grow into a
+                powerful, trustworthy presence in the world.
+              </p>
+              <div class="philo-pills">
+                <div class="philo-pill">We care about craft, not just invoices.</div>
+                <div class="philo-pill">We want people who enjoy the work.</div>
+                <div class="philo-pill">Money is fuel for life, not the only goal.</div>
+              </div>
+              <p class="philo-note">
+                JCB exists so skilled people can work deeply, laugh often,
+                and still ship things that actually matter.
+              </p>
+            </div>
+
+            <div class="philo-trio">
+              <div class="philo-card">
+                <div class="philo-label">Jnyan</div>
+                <div class="philo-heading">Knowledge</div>
+                <div class="philo-text">
+                  We respect depth. Strong fundamentals in data, software, and
+                  problem framing — not just buzzwords.
+                </div>
+              </div>
+              <div class="philo-card">
+                <div class="philo-label">Cit</div>
+                <div class="philo-heading">Consciousness</div>
+                <div class="philo-text">
+                  Awareness of people, context, and long-term consequences. We aim
+                  for technology that supports humans, not the other way around.
+                </div>
+              </div>
+              <div class="philo-card">
+                <div class="philo-label">Bajrang</div>
+                <div class="philo-heading">Strength</div>
+                <div class="philo-text">
+                  Reliability, courage, and follow-through. Showing up when things
+                  get messy, and finishing what we start.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">How we work</div>
+            <div class="section-title">Simple process, serious thinking.</div>
+          </div>
+          <div class="section-sub">
+            No 50-slide decks. No chaos. Just a structured way to understand your world,
+            design something appropriate, and quietly make it real.
+          </div>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="process-step">Step 01</div>
+            <div class="process-title">Listen</div>
+            <p>
+              Understand your context, constraints, and what “success” actually looks like —
+              from your side, not a template.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-step">Step 02</div>
+            <div class="process-title">Design</div>
+            <p>
+              Sketch the architecture, flows, and outputs. We keep things small, modular,
+              and realistic for your team to maintain.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-step">Step 03</div>
+            <div class="process-title">Build</div>
+            <p>
+              Implement pipelines, dashboards, code, or automations. Ship in small slices,
+              so you see progress early.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-step">Step 04</div>
+            <div class="process-title">Grow together</div>
+            <p>
+              Adjust, extend, and support. Stay on as a quiet partner, or wrap up cleanly
+              when the work is done.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Projects & demos</div>
+            <div class="section-title">The kind of work JCB loves.</div>
+          </div>
+          <div class="section-sub">
+            This section grows with time. For now, it shows the kind of problems
+            we are excited to solve — and how we typically approach them.
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-label">Data & Analytics</div>
+            <h3 class="project-title">Analytics foundation for a growing team</h3>
+            <p class="project-body">
+              Clean up scattered data, build a simple warehouse, and surface a handful of
+              dashboards that leadership actually checks every week.
+            </p>
+            <div class="project-tags">
+              <span class="pill">ETL pipelines</span>
+              <span class="pill">SQL & models</span>
+              <span class="pill">KPIs that matter</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-label">Automation</div>
+            <h3 class="project-title">Removing the “copy-paste” hours</h3>
+            <p class="project-body">
+              Connect forms, sheets, CRMs, and email so repetitive work quietly
+              gets handled, and people can think instead of babysitting tools.
+            </p>
+            <div class="project-tags">
+              <span class="pill">Workflow design</span>
+              <span class="pill">Notifications</span>
+              <span class="pill">Bots & triggers</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-label">Software</div>
+            <h3 class="project-title">Simple internal tools that feel good</h3>
+            <p class="project-body">
+              Small web apps for internal use: tracking work, checking health of systems,
+              or giving non-technical staff a clean interface.
+            </p>
+            <div class="project-tags">
+              <span class="pill">Frontend & backend</span>
+              <span class="pill">Auth & roles</span>
+              <span class="pill">Integrations</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">About the company</div>
+            <div class="section-title">Small on purpose. Serious by design.</div>
+          </div>
+          <div class="section-sub">
+            JCB is being built slowly and intentionally — to stay human, to stay
+            sharp, and to do work its founders are proud of, not just busy with.
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <div class="about-highlight">
+              JCB is headquartered in Houston, Texas and exists at the intersection of
+              data, software, and human-centered systems.
+            </div>
+            <div class="about-main">
+              <p>
+                The long-term vision is not to become a giant, anonymous consultancy.
+                It’s to stay compact, trustworthy, and strong — a place where skilled
+                people bring their whole mind to work and still have a life outside of it.
+              </p>
+              <p>
+                Our ideal clients are teams who care about clarity, honesty, and
+                sustainable pace. People who want things done properly, without drama.
+              </p>
+            </div>
+          </div>
+
+          <aside class="about-card">
+            <div class="about-lines">
+              <strong>Jnyan Cit Bajrang LLC</strong><br/>
+              JCB TechHub<br/><br/>
+              Knowledge (Jnyan) means we keep learning and refining our craft.<br/><br/>
+              Consciousness (Cit) means we pay attention — to people, to context,
+              to consequences.<br/><br/>
+              Strength (Bajrang) means we aim to be reliable: in delivery, in
+              communication, and in how we show up when things are hard.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <h2 class="contact-title">Let’s build something with strength.</h2>
+          <p class="contact-body">
+            Whether you need help with data, automation, analytics, or a focused
+            software project — JCB can step in as your thinking partner and delivery team.
+          </p>
+          <!-- Replace this email once you set up your custom one -->
+          <a href="mailto:contact@jcbtechhub.com" class="btn-primary">
+            Email JCB TechHub
+          </a>
+          <div class="contact-meta">
+            Based in <span>Houston, Texas</span> · working remotely with good people.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        © <span id="year"></span> Jnyan Cit Bajrang LLC · JCB TechHub · Houston, Texas
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
