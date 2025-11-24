@@ -5,27 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JCB</title>
   <meta name="description" content="JCB – a simple starting point for a consulting and products studio." />
-body {
-  background: url('zoro-bg.jpg') center center / cover fixed no-repeat;
-  position: relative;
-}
-
-/* Light overlay so the text stays readable */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(245, 245, 245, 0.85); 
-  pointer-events: none;
-  z-index: -1;
-}
 
   <style>
     :root {
-      --bg-page: #F5F5F5;
       --bg-card: #FFFFFF;
       --border-soft: #E0E0E0;
       --text-main: #111111;
@@ -46,7 +28,9 @@ body::before {
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: var(--bg-page);
+
+      /* 🔹 Zoro background */
+      background: url('zoro-bg.jpg') center center / cover fixed no-repeat;
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
     }
@@ -54,6 +38,12 @@ body::before {
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    /* translucent overlay so text is readable on top of the image */
+    .page-overlay {
+      min-height: 100vh;
+      background: rgba(245, 245, 245, 0.86);
     }
 
     .container {
@@ -67,13 +57,13 @@ body::before {
 
     header {
       border-bottom: 1px solid var(--border-soft);
-      background-color: #FFFFFF;
+      background-color: rgba(255, 255, 255, 0.92);
     }
 
     .nav {
       display: flex;
-      justify-content: center; /* everything centered */
-      gap: 2.5rem;            /* equal spacing between items */
+      justify-content: center;
+      gap: 2.5rem;
       align-items: center;
       padding: 0.9rem 0;
       font-size: 0.9rem;
@@ -243,7 +233,7 @@ body::before {
       padding: 0.9rem 0 1.1rem;
       font-size: 0.78rem;
       color: var(--text-muted);
-      background-color: #F3F3F3;
+      background-color: rgba(243, 243, 243, 0.92);
     }
 
     .footer-inner {
@@ -288,115 +278,117 @@ body::before {
 </head>
 
 <body>
-  <!-- TOP NAV, EVERYTHING CENTERED -->
-  <header>
-    <div class="container">
-      <nav class="nav">
-        <div class="nav-logo">JCB</div>
-        <a href="#top" class="nav-item">Home</a>
-        <a href="#products" class="nav-item">Products</a>
-        <a href="#support" class="nav-item">Support</a>
-        <a href="#search" class="nav-item">Search</a>
-        <a href="#contact" class="nav-item">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="page-overlay">
+    <!-- TOP NAV, EVERYTHING CENTERED -->
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <div class="nav-logo">JCB</div>
+          <a href="#top" class="nav-item">Home</a>
+          <a href="#products" class="nav-item">Products</a>
+          <a href="#support" class="nav-item">Support</a>
+          <a href="#search" class="nav-item">Search</a>
+          <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-  <main>
-    <div class="container">
-      <!-- SIMPLE INTRO -->
-      <section class="intro">
-        <h1 class="intro-title">JCB</h1>
-        <p class="intro-text">
-          A simple starting point for a small studio that can grow over time.
-          This page just gives people a way to see the basics and send a question.
-        </p>
-      </section>
-
-      <!-- BASIC SECTIONS: NAMES / PRODUCTS / SUPPORT -->
-
-      <section id="products" class="sections-row">
-        <article class="section-card">
-          <h2 class="section-title">What JCB is</h2>
-          <p class="section-text">
-            JCB is a small consulting and products studio. For now, this is just a
-            simple website so people can reach out and say what they need.
+    <main>
+      <div class="container">
+        <!-- SIMPLE INTRO -->
+        <section class="intro">
+          <h1 class="intro-title">JCB</h1>
+          <p class="intro-text">
+            A simple starting point for a small studio that can grow over time.
+            This page just gives people a way to see the basics and send a question.
           </p>
-        </article>
+        </section>
 
-        <article class="section-card" id="support">
-          <h2 class="section-title">Support & help</h2>
-          <p class="section-text">
-            If you already work with JCB or want help with something specific, use
-            the form below to describe the situation in a few clear sentences.
-          </p>
-        </article>
+        <!-- BASIC SECTIONS: NAMES / PRODUCTS / SUPPORT -->
 
-        <article class="section-card" id="search">
-          <h2 class="section-title">Search (for later)</h2>
-          <p class="section-text">
-            In the future this area can become a search or resource space. For now,
-            it is just a placeholder so the layout feels complete.
-          </p>
-        </article>
-      </section>
+        <section id="products" class="sections-row">
+          <article class="section-card">
+            <h2 class="section-title">What JCB is</h2>
+            <p class="section-text">
+              JCB is a small consulting and products studio. For now, this is just a
+              simple website so people can reach out and say what they need.
+            </p>
+          </article>
 
-      <!-- CONTACT / QUESTION FORM -->
+          <article class="section-card" id="support">
+            <h2 class="section-title">Support & help</h2>
+            <p class="section-text">
+              If you already work with JCB or want help with something specific, use
+              the form below to describe the situation in a few clear sentences.
+            </p>
+          </article>
 
-      <section id="contact" class="contact-wrapper">
-        <div class="contact-card">
-          <h2 class="contact-title">Send a question to JCB</h2>
-          <p class="contact-text">
-            Leave your details and what you need. This does not do anything
-            automatic yet — it is just the first version of a contact form.
-          </p>
+          <article class="section-card" id="search">
+            <h2 class="section-title">Search (for later)</h2>
+            <p class="section-text">
+              In the future this area can become a search or resource space. For now,
+              it is just a placeholder so the layout feels complete.
+            </p>
+          </article>
+        </section>
 
-          <form>
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" />
-            </div>
+        <!-- CONTACT / QUESTION FORM -->
 
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" />
-            </div>
+        <section id="contact" class="contact-wrapper">
+          <div class="contact-card">
+            <h2 class="contact-title">Send a question to JCB</h2>
+            <p class="contact-text">
+              Leave your details and what you need. This does not do anything
+              automatic yet — it is just the first version of a contact form.
+            </p>
 
-            <div>
-              <label for="topic">What is this about?</label>
-              <input id="topic" name="topic" type="text" placeholder="Example: website, data, automation, other" />
-            </div>
+            <form>
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" />
+              </div>
 
-            <div>
-              <label for="message">Your question or request</label>
-              <textarea id="message" name="message" placeholder="Write in normal language."></textarea>
-            </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" />
+              </div>
 
-            <button type="button" class="btn-submit">
-              Submit (placeholder)
-            </button>
+              <div>
+                <label for="topic">What is this about?</label>
+                <input id="topic" name="topic" type="text" placeholder="Example: website, data, automation, other" />
+              </div>
 
-            <div class="form-note">
-              In the next versions, this button can send an email or connect to a
-              proper support system. For now, this is just the visual design.
-            </div>
-          </form>
+              <div>
+                <label for="message">Your question or request</label>
+                <textarea id="message" name="message" placeholder="Write in normal language."></textarea>
+              </div>
+
+              <button type="button" class="btn-submit">
+                Submit (placeholder)
+              </button>
+
+              <div class="form-note">
+                In the next versions, this button can send an email or connect to a
+                proper support system. For now, this is just the visual design.
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          © <span id="year"></span> JCB
         </div>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div>
-        © <span id="year"></span> JCB
+        <div class="footer-links">
+          <a href="#top">Home</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#top">Home</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
